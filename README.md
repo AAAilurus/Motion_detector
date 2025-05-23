@@ -10,7 +10,7 @@ import os  # to handle file path
 
 # Email configuration
 EMAIL_SENDER = "thebasantaadhikari@gmail.com"  # sender email address
-EMAIL_PASSWORD = "xbmo dqog tten ieux"  # app password from email provider
+EMAIL_PASSWORD = "abc def ghi jkl"  # app password from email provider
 EMAIL_RECEIVER = "ailurus2005@gmail.com"  # receiver email address
 
 def send_email_with_attachment(filename):
