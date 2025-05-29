@@ -1,34 +1,34 @@
-What to do inside the code?
+What to do inside the code:
 
-1. Start by preparing the system to capture video using the device's camera.
-2. Wait for a short moment to let the camera stabilize.
-3. Define the sender's email address and password (from Gmail app password).
-4. Define the reciver's email address to send alerts.
-5. Set up the email sending method with a secure connection.
-6. Capture the very first frame from the camera.
-7. Convert this frame to grayscale (black and white).
-8. Apply a blur to this frame to remove small lighting changes or noise.
-9. Save this as the "reference background frame" for comparing future frames.
-10. Enter an infinite loop that repeatedly captures new frames from the camera.
-11. Resize the frame to a smaller width to make processing faster.
-12. Convert the current frame to grayscale.
-13. Apply the same blur to reduce noise and small irrelevant changes.
-14. Take the absolute difference between the new frame and the reference frame.
-15. The result shows areas where pixels have changed — potential motion areas.
-16. Apply a threshold to turn the difference into a binary image (white = motion, black = no motion).
-17. Dilate (thicken) the white areas to make the motion zones clearer and more connected.
-18. Identify the contours (shapes) of the white motion areas.
-19. For each detected contour, check its size (area).
-20. If it's smaller than a specific size (e.g., a small light flicker), ignore it.
-21. If it's large enough, mark that motion has occurred.
-22. Draw a rectangle around the detected motion area on the current frame for visual tracking (optional for display or debugging).
-23. Get the current date and time to create a unique filename.
-24. Save the current frame as an image with that filename.
-25. Create an email with a subject and message saying motion was detected.
-26. Attach the saved image file.
-27. Send the email to the recipient.
-28. Add a short pause (e.g., 1 second) to avoid sending too many emails if motion is detected continuously.
-29. Keep looping to check for more motion.
-30. You can choose to update the reference frame occasionally or after sending an alert, depending on your design.
-31. When the loop ends (manually or through a break condition), release the camera.
-32. Close all used resources and clean up.
+1. Start the camera so it can take video.
+2. Wait a little bit so the camera gets ready.
+3. Write down my email address and app password to send emails.
+4. Write down the email address where I want to send alerts.
+5. Set up the email sending system with a safe connection.
+6. Take the very first picture from the camera.
+7. Change this picture to black and white (gray scale).
+8. Blur the picture a little to ignore small light changes or noise.
+9. Save this blurred gray picture as the background to compare with later pictures.
+10. Start a loop that keeps taking new pictures from the camera again and again.
+11. Make the new picture smaller so it’s faster to check.
+12. Change the new picture to black and white.
+13. Blur this new picture the same way to reduce small changes.
+14. Compare the new blurred gray picture with the first saved background picture.
+15. See where the pixels are different — that means there might be motion.
+16. Turn the difference picture into black and white — white means motion, black means no motion.
+17. Make the white motion parts thicker so it’s easier to find.
+18. Find the outlines (contours) of the white motion parts.
+19. For each motion part found, check how big it is.
+20. If it’s too small (like small flickers), ignore it.
+21. If it’s big enough, say “motion detected.”
+22. Draw a green rectangle around the motion part on the picture to show where the motion is.
+23. Get the current date and time to make a unique file name.
+24. Save the current picture with the green rectangle as an image file.
+25. Create an email message with a subject saying motion is detected.
+26. Attach the saved image to the email.
+27. Send the email to the person I want to alert.
+28. Wait for 1 second so I don’t send too many emails too fast.
+29. Keep repeating the loop to check for more motion.
+30. Optionally, update the background picture sometimes or after sending an alert to adjust to changes.
+31. When I want to stop, close the camera.
+32. Clean up all open windows and resources.
