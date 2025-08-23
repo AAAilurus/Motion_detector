@@ -1,0 +1,1 @@
+Developed a motion detection system in Python using OpenCV that captures images, sends email alerts, and issues text-to-speech notifications, demonstrating integration of computer vision and automation.
